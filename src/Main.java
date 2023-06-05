@@ -3,7 +3,7 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
         System.out.println(Arrays.toString(mergeSort(new int[]{-6, 10, -88, 6, 0})));
-
+        System.out.println(Arrays.toString(mergeSort(new int[]{-6, 10, -88, 6, 0})));
     }
 
     public static boolean isSorted(int[] array) {
