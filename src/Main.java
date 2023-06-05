@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Merge Sort");
+        System.out.println(isSorted(new int[]{-6,10,-88,6,0}));
 
     }
     public static boolean isSorted(int[] array){
