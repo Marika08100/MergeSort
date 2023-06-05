@@ -17,8 +17,37 @@ public class Main {
     }
 
     public static int[] merge(int[] leftArray, int[] rightArray) {
+        int[] array = new int[leftArray.length + rightArray.length];
 
-        return null;
+        int arrayIndex = 0;
+        int leftIndex = 0;
+        int rightIndex = 0;
+
+        while (arrayIndex < array.length &&
+                rightIndex < rightArray.length &&
+                leftIndex < leftArray.length) {
+            if (leftArray[leftIndex] < rightArray[rightIndex]) {
+                array[arrayIndex] = leftArray[leftIndex];
+                leftIndex++;
+            } else {
+                array[arrayIndex] = rightArray[rightIndex];
+                rightIndex++;
+            }
+            arrayIndex++;
+        }
+        while (rightIndex < rightArray.length) {
+            array[arrayIndex] = rightArray[rightIndex];
+            rightIndex++;
+            arrayIndex++;
+        }
+        while (leftIndex < leftArray.length) {
+            array[arrayIndex] = leftArray[leftIndex];
+            leftIndex++;
+            arrayIndex++;
+
+        }
+
+        return array;
     }
 
     public static int[] mergeSort(int[] array) {
